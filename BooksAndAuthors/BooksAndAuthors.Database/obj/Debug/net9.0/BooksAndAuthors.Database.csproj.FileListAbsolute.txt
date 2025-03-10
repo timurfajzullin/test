@@ -1,0 +1,14 @@
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\bin\Debug\net9.0\BooksAndAuthors.Database.deps.json
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\bin\Debug\net9.0\BooksAndAuthors.Database.runtimeconfig.json
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\bin\Debug\net9.0\BooksAndAuthors.Database.dll
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\bin\Debug\net9.0\BooksAndAuthors.Database.pdb
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\obj\Debug\net9.0\BooksAndAuthors.Database.csproj.AssemblyReference.cache
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\obj\Debug\net9.0\BooksAndAuthors.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\obj\Debug\net9.0\BooksAndAuthors.Database.AssemblyInfoInputs.cache
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\obj\Debug\net9.0\BooksAndAuthors.Database.AssemblyInfo.cs
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\obj\Debug\net9.0\BooksAndAuthors.Database.csproj.CoreCompileInputs.cache
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\obj\Debug\net9.0\BooksAndAuthors.Database.dll
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\obj\Debug\net9.0\refint\BooksAndAuthors.Database.dll
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\obj\Debug\net9.0\BooksAndAuthors.Database.pdb
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\obj\Debug\net9.0\BooksAndAuthors.Database.genruntimeconfig.cache
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Database\obj\Debug\net9.0\ref\BooksAndAuthors.Database.dll

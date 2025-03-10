@@ -1,0 +1,17 @@
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\bin\Debug\net9.0\BooksAndAuthors.Controllers.deps.json
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\bin\Debug\net9.0\BooksAndAuthors.Controllers.runtimeconfig.json
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\bin\Debug\net9.0\BooksAndAuthors.Controllers.dll
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\bin\Debug\net9.0\BooksAndAuthors.Controllers.pdb
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\bin\Debug\net9.0\BooksAndAuthors.Database.dll
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\bin\Debug\net9.0\BooksAndAuthors.Database.pdb
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\obj\Debug\net9.0\BooksAndAuthors.Controllers.csproj.AssemblyReference.cache
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\obj\Debug\net9.0\BooksAndAuthors.Controllers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\obj\Debug\net9.0\BooksAndAuthors.Controllers.AssemblyInfoInputs.cache
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\obj\Debug\net9.0\BooksAndAuthors.Controllers.AssemblyInfo.cs
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\obj\Debug\net9.0\BooksAndAuthors.Controllers.csproj.CoreCompileInputs.cache
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\obj\Debug\net9.0\BooksAnd.7E0DAF03.Up2Date
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\obj\Debug\net9.0\BooksAndAuthors.Controllers.dll
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\obj\Debug\net9.0\refint\BooksAndAuthors.Controllers.dll
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\obj\Debug\net9.0\BooksAndAuthors.Controllers.pdb
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\obj\Debug\net9.0\BooksAndAuthors.Controllers.genruntimeconfig.cache
+C:\Users\fajzu\RiderProjects\BooksAndAuthors\BooksAndAuthors.Controllers\obj\Debug\net9.0\ref\BooksAndAuthors.Controllers.dll

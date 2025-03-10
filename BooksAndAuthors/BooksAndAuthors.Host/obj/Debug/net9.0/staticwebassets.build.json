@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "EpwG5YVGNbNYahrk2K16ZJnkee22bGhtFyIXJm9P49Y=",
+  "Source": "BooksAndAuthors.Host",
+  "BasePath": "_content/BooksAndAuthors.Host",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

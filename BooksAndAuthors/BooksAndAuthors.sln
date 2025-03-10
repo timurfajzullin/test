@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Host", "BooksAndAuthors.Host\BooksAndAuthors.Host.csproj", "{A1441006-4CF4-490C-B032-EAF8CB4005F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Database", "BooksAndAuthors.Database\BooksAndAuthors.Database.csproj", "{77FCED08-5DF0-4016-96E1-077B2A5EB1C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Controllers", "BooksAndAuthors.Controllers\BooksAndAuthors.Controllers.csproj", "{7FF3F4DA-C577-4ADB-8D2B-39DD57F26015}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1441006-4CF4-490C-B032-EAF8CB4005F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1441006-4CF4-490C-B032-EAF8CB4005F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1441006-4CF4-490C-B032-EAF8CB4005F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1441006-4CF4-490C-B032-EAF8CB4005F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77FCED08-5DF0-4016-96E1-077B2A5EB1C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77FCED08-5DF0-4016-96E1-077B2A5EB1C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77FCED08-5DF0-4016-96E1-077B2A5EB1C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77FCED08-5DF0-4016-96E1-077B2A5EB1C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FF3F4DA-C577-4ADB-8D2B-39DD57F26015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FF3F4DA-C577-4ADB-8D2B-39DD57F26015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FF3F4DA-C577-4ADB-8D2B-39DD57F26015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FF3F4DA-C577-4ADB-8D2B-39DD57F26015}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
