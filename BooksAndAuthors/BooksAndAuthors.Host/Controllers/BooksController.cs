@@ -1,4 +1,6 @@
-﻿using BooksAndAuthors.Controllers.Services;
+﻿using AutoMapper;
+using BooksAndAuthors.Controllers.Services;
+using Contracts.Dto;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 
@@ -9,44 +11,53 @@ namespace BooksAndAuthors.Controllers;
 public class BooksController : ControllerBase
 {
     private readonly BookService _booksService;
+    private readonly IMapper _mapper;
     
-    public BooksController(BookService booksService)
+    public BooksController(BookService booksService, IMapper mapper)
     {
         _booksService = booksService;
+        _mapper = mapper;
     }
     
     [HttpGet]
     public async Task<IActionResult> GetAllBooks()
     {
-        var result = await _booksService.GetBooks();
+        var books = await _booksService.GetBooks();
+        var result = _mapper.Map<List<BookDto>>(books);
         return Ok(result);
     }
     
     [HttpGet("{id}")]
     public async Task<IActionResult> GetBookById(Guid id)
     {
-        var result = await _booksService.GetBookByIdAsync(id);
+        var book = await _booksService.GetBookByIdAsync(id);
+        if (book == null)
+            return NotFound();
+        
+        var result = _mapper.Map<BookDto>(book);
         return Ok(result);
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddBook(Book book)
+    public async Task<IActionResult> AddBook(BookDto bookDto)
     {
+        var book = _mapper.Map<Book>(bookDto);
         await _booksService.AddBookAsync(book);
         return Ok("Успешно добавлено");
     }
 
-    // [HttpPut]
-    // public async Task<IActionResult> UpdateBook(Book book)
-    // {
-    //     await _booksService.UpdateBookAsync(book);
-    //     return Ok("Успешно обновлено");
-    // }
-    //
-    // [HttpDelete("{id}")]
-    // public async Task<IActionResult> DeleteBook(Guid id)
-    // {
-    //     await _booksService.DeleteBookAsync(id);
-    //     return Ok("Успешно удалено");
-    // }
+    [HttpPut]
+    public async Task<IActionResult> UpdateBook(BookDto bookDto)
+    {
+        var book = _mapper.Map<Book>(bookDto);
+        await _booksService.UpdateBookAsync(book);
+        return Ok("Успешно обновлено");
+    }
+    
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteBook(Guid id)
+    {
+        await _booksService.DeleteBookAsync(id);
+        return Ok("Успешно удалено");
+    }
 }

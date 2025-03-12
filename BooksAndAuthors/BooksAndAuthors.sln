@@ -6,7 +6,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Database", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Features", "BooksAndAuthors.Features\BooksAndAuthors.Features.csproj", "{7FF3F4DA-C577-4ADB-8D2B-39DD57F26015}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{A94FC54D-B169-47FD-9D25-5A6308E3A948}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Contracts", "BooksAndAuthors.Contracts\BooksAndAuthors.Contracts.csproj", "{A94FC54D-B169-47FD-9D25-5A6308E3A948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Common", "BooksAndAuthors.Common\BooksAndAuthors.Common.csproj", "{C405D101-F0D0-4B10-8876-7421EFB207BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +32,9 @@ Global
 		{A94FC54D-B169-47FD-9D25-5A6308E3A948}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A94FC54D-B169-47FD-9D25-5A6308E3A948}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A94FC54D-B169-47FD-9D25-5A6308E3A948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C405D101-F0D0-4B10-8876-7421EFB207BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C405D101-F0D0-4B10-8876-7421EFB207BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C405D101-F0D0-4B10-8876-7421EFB207BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C405D101-F0D0-4B10-8876-7421EFB207BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
