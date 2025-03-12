@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BooksAndAuthors.Database")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5dd36ba22d5eb254770d934eb124ff15e250e794")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5250bd8fde804d2364ed2b846c4e2d54315ff96")]
 [assembly: System.Reflection.AssemblyProductAttribute("BooksAndAuthors.Database")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BooksAndAuthors.Database")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

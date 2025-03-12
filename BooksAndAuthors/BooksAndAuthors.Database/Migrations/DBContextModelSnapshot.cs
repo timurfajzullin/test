@@ -10,7 +10,6 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace BooksAndAuthors.Database.Migrations
 {
-    [DbContext(typeof(DBContext))]
     partial class DBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

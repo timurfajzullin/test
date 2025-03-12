@@ -11,7 +11,6 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace BooksAndAuthors.Database.Migrations
 {
-    [DbContext(typeof(DBContext))]
     [Migration("20250309170729_initial2")]
     partial class initial2
     {

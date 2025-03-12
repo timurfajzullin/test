@@ -4,7 +4,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Host", "Boo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Database", "BooksAndAuthors.Database\BooksAndAuthors.Database.csproj", "{77FCED08-5DF0-4016-96E1-077B2A5EB1C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Controllers", "BooksAndAuthors.Controllers\BooksAndAuthors.Controllers.csproj", "{7FF3F4DA-C577-4ADB-8D2B-39DD57F26015}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Features", "BooksAndAuthors.Features\BooksAndAuthors.Features.csproj", "{7FF3F4DA-C577-4ADB-8D2B-39DD57F26015}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{A94FC54D-B169-47FD-9D25-5A6308E3A948}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +26,9 @@ Global
 		{7FF3F4DA-C577-4ADB-8D2B-39DD57F26015}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FF3F4DA-C577-4ADB-8D2B-39DD57F26015}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FF3F4DA-C577-4ADB-8D2B-39DD57F26015}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A94FC54D-B169-47FD-9D25-5A6308E3A948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A94FC54D-B169-47FD-9D25-5A6308E3A948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A94FC54D-B169-47FD-9D25-5A6308E3A948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A94FC54D-B169-47FD-9D25-5A6308E3A948}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

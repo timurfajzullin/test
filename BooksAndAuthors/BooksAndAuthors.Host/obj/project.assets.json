@@ -1757,22 +1757,6 @@
           }
         }
       },
-      "BooksAndAuthors.Controllers/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "BooksAndAuthors.Database": "1.0.0",
-          "EntityFramework": "6.5.1",
-          "Microsoft.AspNetCore.Mvc.Core": "2.3.0",
-          "Microsoft.EntityFrameworkCore": "9.0.2"
-        },
-        "compile": {
-          "bin/placeholder/BooksAndAuthors.Controllers.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BooksAndAuthors.Controllers.dll": {}
-        }
-      },
       "BooksAndAuthors.Database/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -1788,6 +1772,22 @@
         },
         "runtime": {
           "bin/placeholder/BooksAndAuthors.Database.dll": {}
+        }
+      },
+      "BooksAndAuthors.Features/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "BooksAndAuthors.Database": "1.0.0",
+          "EntityFramework": "6.5.1",
+          "Microsoft.AspNetCore.Mvc.Core": "2.3.0",
+          "Microsoft.EntityFrameworkCore": "9.0.2"
+        },
+        "compile": {
+          "bin/placeholder/BooksAndAuthors.Features.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BooksAndAuthors.Features.dll": {}
         }
       }
     }
@@ -4868,21 +4868,21 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "BooksAndAuthors.Controllers/1.0.0": {
-      "type": "project",
-      "path": "../BooksAndAuthors.Controllers/BooksAndAuthors.Controllers.csproj",
-      "msbuildProject": "../BooksAndAuthors.Controllers/BooksAndAuthors.Controllers.csproj"
-    },
     "BooksAndAuthors.Database/1.0.0": {
       "type": "project",
       "path": "../BooksAndAuthors.Database/BooksAndAuthors.Database.csproj",
       "msbuildProject": "../BooksAndAuthors.Database/BooksAndAuthors.Database.csproj"
+    },
+    "BooksAndAuthors.Features/1.0.0": {
+      "type": "project",
+      "path": "../BooksAndAuthors.Features/BooksAndAuthors.Features.csproj",
+      "msbuildProject": "../BooksAndAuthors.Features/BooksAndAuthors.Features.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "BooksAndAuthors.Controllers >= 1.0.0",
       "BooksAndAuthors.Database >= 1.0.0",
+      "BooksAndAuthors.Features >= 1.0.0",
       "EntityFramework >= 6.5.1",
       "Microsoft.AspNetCore.Mvc.Core >= 2.3.0",
       "Microsoft.AspNetCore.OpenApi >= 9.0.0",
@@ -4920,11 +4920,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Controllers\\BooksAndAuthors.Controllers.csproj": {
-              "projectPath": "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Controllers\\BooksAndAuthors.Controllers.csproj"
-            },
             "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Database\\BooksAndAuthors.Database.csproj": {
               "projectPath": "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Database\\BooksAndAuthors.Database.csproj"
+            },
+            "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Features\\BooksAndAuthors.Features.csproj": {
+              "projectPath": "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Features\\BooksAndAuthors.Features.csproj"
             }
           }
         }

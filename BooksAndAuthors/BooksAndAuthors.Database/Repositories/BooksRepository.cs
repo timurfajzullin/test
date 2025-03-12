@@ -5,9 +5,9 @@ namespace BooksAndAuthors.Database.Repositories;
 
 public class BooksRepository
 {
-    private readonly DBContext _dbContext;
+    private readonly IBookContext _dbContext;
 
-    public BooksRepository(DBContext dbContext)
+    public BooksRepository(IBookContext dbContext)
     {
         _dbContext = dbContext;
     }
@@ -32,7 +32,7 @@ public class BooksRepository
             ISBN = book.ISBN,
             AuthorId = book.AuthorId
         });
-        await _dbContext.SaveChangesAsync();
+        // await _dbContext.SaveChangesAsync();
     }
 
     public async Task DeleteBookAsync(Guid id)
@@ -43,6 +43,6 @@ public class BooksRepository
     public async Task UpdateBookAsync(Book book)
     {
         _dbContext.Books.Update(book);
-        await _dbContext.SaveChangesAsync();
+        // await _dbContext.SaveChangesAsync();
     }
 }

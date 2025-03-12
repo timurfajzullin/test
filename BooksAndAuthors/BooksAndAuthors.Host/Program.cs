@@ -14,11 +14,10 @@ builder.Services.AddScoped<BooksRepository>();
 builder.Services.AddScoped<AuthorsRepository>();
 builder.Services.AddScoped<BookService>();
 builder.Services.AddScoped<AuthorService>();
-builder.Services.AddScoped<DBContext>();
-builder.Services.AddDbContext<DBContext>(
+builder.Services.AddDbContext<IBookContext, BookContext>(
     options =>
     {
-        options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(DBContext)));
+        options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(BookContext)));
     }
 );
 
