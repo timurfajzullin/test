@@ -1,6 +1,6 @@
 ﻿namespace Contracts.Dto;
 
-public class BookDto
+public class GetBookDto
 {
     public string Title { get; set; } = string.Empty;
     public bool ISBN { get; set; }

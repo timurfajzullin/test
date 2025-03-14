@@ -25,7 +25,7 @@ namespace BooksAndAuthors.Features
         public async Task<IActionResult> GetAuthors()
         {
             var authors = await _authorService.GetAuthors();
-            var authorDtos = _mapper.Map<IEnumerable<AuthorDto>>(authors);
+            var authorDtos = _mapper.Map<IEnumerable<GetAuthorDto>>(authors);
             return Ok(authorDtos);
         }
 
@@ -37,12 +37,12 @@ namespace BooksAndAuthors.Features
             {
                 return NotFound();
             }
-            var authorDto = _mapper.Map<AuthorDto>(author);
+            var authorDto = _mapper.Map<GetAuthorDto>(author);
             return Ok(authorDto);
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddAuthor([FromBody] AuthorDto authorDto)
+        public async Task<IActionResult> AddAuthor([FromBody] PostAuthorDto authorDto)
         {
             if (authorDto == null)
             {
@@ -50,7 +50,7 @@ namespace BooksAndAuthors.Features
             }
             var author = _mapper.Map<Author>(authorDto);
             await _authorService.AddAuthor(author);
-            return Ok(new { Message = "Успешно добавлено", Author = _mapper.Map<AuthorDto>(author) });
+            return Ok(new { Message = "Успешно добавлено", Author = _mapper.Map<GetAuthorDto>(author) });
         }
 
         [HttpDelete("{id}")]
@@ -66,12 +66,12 @@ namespace BooksAndAuthors.Features
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateAuthor([FromBody] AuthorDto authorDto)
+        public async Task<IActionResult> UpdateAuthor([FromBody] PostAuthorDto authorDto)
         {
             
             var author = _mapper.Map<Author>(authorDto);
             await _authorService.UpdateAuthor(author);
-            return Ok(new { Message = "Успешно обновлено", Author = _mapper.Map<AuthorDto>(author) });
+            return Ok(new { Message = "Успешно обновлено", Author = _mapper.Map<GetAuthorDto>(author) });
         }
     }
 }

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "tS9rajMFanw=",
+  "dgSpecHash": "GmYtyGQg1io=",
   "success": true,
   "projectFilePath": "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Common\\BooksAndAuthors.Common.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\fajzu\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
+    "C:\\Users\\fajzu\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\fajzu\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\fajzu\\.nuget\\packages\\entityframework\\6.5.1\\entityframework.6.5.1.nupkg.sha512",
     "C:\\Users\\fajzu\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.3.0\\microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512",
@@ -105,16 +105,6 @@
     "C:\\Users\\fajzu\\.nuget\\packages\\system.xml.xdocument\\4.0.11\\system.xml.xdocument.4.0.11.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requires AutoMapper (= 12.0.1) but version AutoMapper 14.0.0 was resolved.",
-      "libraryId": "AutoMapper",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    },
     {
       "code": "NU1903",
       "level": "Warning",

@@ -13,21 +13,28 @@ namespace BooksAndAuthors.Database
         {
             modelBuilder.Entity<Author>().HasKey(x => x.Id);
             modelBuilder.Entity<Book>().HasKey(x => x.Id);
-            modelBuilder.Entity<Book>().HasOne<Author>()
+            modelBuilder.Entity<Book>()
+                .HasOne(b => b.Author)
                 .WithMany(a => a.Books)
-                .HasForeignKey(x => x.AuthorId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .HasForeignKey(b => b.AuthorId);
             
             base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
+        
+        public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            return await base.SaveChangesAsync(cancellationToken);
+        }
     }
     
     public interface IBookContext
     {
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
+        
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }
 }

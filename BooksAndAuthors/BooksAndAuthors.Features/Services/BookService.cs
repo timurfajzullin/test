@@ -26,15 +26,18 @@ public class BookService
     public async Task AddBookAsync(Book book)
     {
         await _bookContext.Books.AddAsync(book);
+        await _bookContext.SaveChangesAsync();
     }
 
     public async Task UpdateBookAsync(Book book)
     {
         _bookContext.Books.Update(book);
+        await _bookContext.SaveChangesAsync();
     }
-    
+
     public async Task DeleteBookAsync(Guid id)
     {
-        _bookContext.Books.Remove(await _bookContext.Books.Where(x => x.Id == id).FirstOrDefaultAsync());
+        _bookContext.Books.Remove(await _bookContext.Books.FindAsync(id));
+        await _bookContext.SaveChangesAsync();
     }
 }

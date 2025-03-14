@@ -23,7 +23,7 @@ public class BooksController : ControllerBase
     public async Task<IActionResult> GetAllBooks()
     {
         var books = await _booksService.GetBooks();
-        var result = _mapper.Map<List<BookDto>>(books);
+        var result = _mapper.Map<List<GetBookDto>>(books);
         return Ok(result);
     }
     
@@ -34,12 +34,12 @@ public class BooksController : ControllerBase
         if (book == null)
             return NotFound();
         
-        var result = _mapper.Map<BookDto>(book);
+        var result = _mapper.Map<GetBookDto>(book);
         return Ok(result);
     }
 
     [HttpPost]
-    public async Task<IActionResult> AddBook(BookDto bookDto)
+    public async Task<IActionResult> AddBook(PostBookDto bookDto)
     {
         var book = _mapper.Map<Book>(bookDto);
         await _booksService.AddBookAsync(book);
@@ -47,7 +47,7 @@ public class BooksController : ControllerBase
     }
 
     [HttpPut]
-    public async Task<IActionResult> UpdateBook(BookDto bookDto)
+    public async Task<IActionResult> UpdateBook(PostBookDto bookDto)
     {
         var book = _mapper.Map<Book>(bookDto);
         await _booksService.UpdateBookAsync(book);

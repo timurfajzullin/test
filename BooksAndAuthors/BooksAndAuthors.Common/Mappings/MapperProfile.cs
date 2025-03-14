@@ -8,12 +8,20 @@ public class MapperProfile : Profile
 {
     public MapperProfile()
     {
-        CreateMap<Book, BookDto>()
-            .ForMember(dest => dest.AuthorName, opt => opt.MapFrom(src => src.Author.Name));
+        CreateMap<Book, GetBookDto>()
+            .ForMember(dest => dest.AuthorName, 
+                opt => opt.MapFrom(src => src.Author.Name));
 
-        CreateMap<BookDto, Book>();
-        CreateMap<Author, AuthorDto>();
-        CreateMap<AuthorDto, Author>()
-            .ForMember(dest => dest.Books, opt => opt.Ignore());
+        CreateMap<PostBookDto, Book>()
+            .ForPath(dest => dest.Author.Name, 
+                opt => opt.MapFrom(src => src.AuthorName));
+
+        CreateMap<Author, GetAuthorDto>()
+            .ForMember(dest => dest.Books, 
+                opt => opt.MapFrom(src => src.Books));
+
+        CreateMap<PostAuthorDto, Author>()
+            .ForMember(dest => dest.Books, 
+                opt => opt.Ignore());
     }
 }

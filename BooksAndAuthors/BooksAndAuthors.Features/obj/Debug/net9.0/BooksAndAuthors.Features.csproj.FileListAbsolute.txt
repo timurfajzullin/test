@@ -16,3 +16,7 @@ C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndA
 C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Features\obj\Debug\net9.0\BooksAndAuthors.Features.pdb
 C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Features\obj\Debug\net9.0\BooksAndAuthors.Features.genruntimeconfig.cache
 C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Features\obj\Debug\net9.0\ref\BooksAndAuthors.Features.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Features\bin\Debug\net9.0\BooksAndAuthors.Common.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Features\bin\Debug\net9.0\BooksAndAuthors.Contracts.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Features\bin\Debug\net9.0\BooksAndAuthors.Common.pdb
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Features\bin\Debug\net9.0\BooksAndAuthors.Contracts.pdb
