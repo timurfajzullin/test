@@ -65,13 +65,21 @@ namespace BooksAndAuthors.Features
             return Ok(new { Message = "Успешно удалено", AuthorId = id });
         }
 
-        [HttpPut]
-        public async Task<IActionResult> UpdateAuthor([FromBody] PostAuthorDto authorDto)
+        [HttpPut("{authorId}")]
+        public async Task<IActionResult> UpdateAuthor(Guid authorId, [FromBody] PostAuthorDto authorDto)
         {
-            
-            var author = _mapper.Map<Author>(authorDto);
-            await _authorService.UpdateAuthor(author);
-            return Ok(new { Message = "Успешно обновлено", Author = _mapper.Map<GetAuthorDto>(author) });
+            var authorToUpdate = await _authorService.GetAuthorById(authorId);
+            if (authorToUpdate == null)
+            {
+                return NotFound();
+            }
+
+            _mapper.Map(authorDto, authorToUpdate);
+
+            await _authorService.UpdateAuthor(authorToUpdate);
+
+            var updatedAuthorDto = _mapper.Map<GetAuthorDto>(authorToUpdate);
+            return Ok(new { Message = "Успешно обновлено", Author = updatedAuthorDto });
         }
     }
 }

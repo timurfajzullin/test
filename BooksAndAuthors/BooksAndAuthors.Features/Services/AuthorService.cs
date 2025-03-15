@@ -32,7 +32,7 @@ public class AuthorService
     public async Task UpdateAuthor(Author author)
     {
         _authorContext.Authors.Update(author);
-        await _authorContext.SaveChangesAsync();
+        _authorContext.SaveChangesAsync();
     }
 
     public async Task DeleteAuthor(Guid id)

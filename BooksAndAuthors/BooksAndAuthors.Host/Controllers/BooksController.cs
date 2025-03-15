@@ -46,12 +46,14 @@ public class BooksController : ControllerBase
         return Ok("Успешно добавлено");
     }
 
-    [HttpPut]
-    public async Task<IActionResult> UpdateBook(PostBookDto bookDto)
+    [HttpPut("{bookId}")]
+    public async Task<IActionResult> UpdateBook(Guid boodId , [FromBody] PostBookDto bookDto)
     {
-        var book = _mapper.Map<Book>(bookDto);
-        await _booksService.UpdateBookAsync(book);
-        return Ok("Успешно обновлено");
+        var bookToUpdate = await _booksService.GetBookByIdAsync(boodId);
+        _mapper.Map(bookDto, bookToUpdate);
+        if (bookToUpdate != null) await _booksService.UpdateBookAsync(bookToUpdate);
+        var updatedBookDto = _mapper.Map<GetBookDto>(bookToUpdate);
+        return Ok(new { Message = "Успешно обновлено", Book = updatedBookDto});
     }
     
     [HttpDelete("{id}")]
