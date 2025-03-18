@@ -1,38 +1,55 @@
-﻿using BooksAndAuthors.Database;
+﻿using BooksAndAuthors.Common.Mappings;
+using BooksAndAuthors.Database;
+using BooksAndAuthors.Database.Models;
+using Contracts.Dto;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Models;
 
 namespace BooksAndAuthors.Controllers.Services;
 
-public class AuthorService
+public class AuthorService : IAuthorService
 {
-    private IBookContext _authorContext;
+    private readonly IBookContext _authorContext;
 
     public AuthorService(IBookContext authorContext)
     {
         _authorContext = authorContext;
     }
-    
-    public async Task<List<Author>> GetAuthors()
+
+    public async Task<List<AuthorDto>> GetAuthors()
     {
-        return await _authorContext.Authors.Include(a => a.Books).ToListAsync();
+        return await _authorContext.Authors
+            .Include(a => a.Books)
+            .Select(x => Mapper.ToAuthorDto(x))
+            .ToListAsync();
     }
 
-    public async Task<Author?> GetAuthorById(Guid id)
+    public async Task<AuthorDto?> GetAuthorById(Guid id)
     {
-        return await _authorContext.Authors.Where(x => x.Id == id).Include(a => a.Books).FirstOrDefaultAsync();
+        return await _authorContext.Authors
+            .Where(x => x.Id == id)
+            .Include(a => a.Books)
+            .Select(x => Mapper.ToAuthorDto(x))
+            .FirstOrDefaultAsync();
     }
 
-    public async Task AddAuthor(Author author)
+    public async Task AddAuthor(CreateAuthorDto author)
     {
-        await _authorContext.Authors.AddAsync(author);
+        await _authorContext.Authors
+            .AddAsync(Mapper.FromAuthorDto(author));
         await _authorContext.SaveChangesAsync();
     }
 
-    public async Task UpdateAuthor(Author author)
+    public async Task UpdateAuthor(Guid id, [FromBody] CreateAuthorDto author)
     {
-        _authorContext.Authors.Update(author);
-        _authorContext.SaveChangesAsync();
+        var authorToUpdate = _authorContext.Authors
+            .FirstOrDefault(x => x.Id == id);
+        if (authorToUpdate != null)
+        { 
+            authorToUpdate.Name = author.Name;
+            _authorContext.Authors.Update(authorToUpdate);
+            await _authorContext.SaveChangesAsync();
+        }
     }
 
     public async Task DeleteAuthor(Guid id)

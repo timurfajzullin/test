@@ -2,7 +2,6 @@
 using BooksAndAuthors.Controllers.Services;
 using Contracts.Dto;
 using Microsoft.AspNetCore.Mvc;
-using Models;
 
 namespace BooksAndAuthors.Controllers;
 
@@ -10,56 +9,45 @@ namespace BooksAndAuthors.Controllers;
 [ApiController]
 public class BooksController : ControllerBase
 {
-    private readonly BookService _booksService;
-    private readonly IMapper _mapper;
+    private readonly IBookService _booksService;
     
-    public BooksController(BookService booksService, IMapper mapper)
+    public BooksController(IBookService booksService)
     {
         _booksService = booksService;
-        _mapper = mapper;
     }
     
-    [HttpGet]
+    [HttpGet("TakeAll")]
     public async Task<IActionResult> GetAllBooks()
     {
-        var books = await _booksService.GetBooks();
-        var result = _mapper.Map<List<GetBookDto>>(books);
+        var result = await _booksService.GetBooks();
         return Ok(result);
     }
     
-    [HttpGet("{id}")]
+    [HttpGet("{id}/TakeById")]
     public async Task<IActionResult> GetBookById(Guid id)
     {
-        var book = await _booksService.GetBookByIdAsync(id);
-        if (book == null)
-            return NotFound();
-        
-        var result = _mapper.Map<GetBookDto>(book);
+        var result = await _booksService.GetBookById(id);
         return Ok(result);
     }
 
-    [HttpPost]
-    public async Task<IActionResult> AddBook(PostBookDto bookDto)
+    [HttpPost("{authorId}/Create")]
+    public async Task<IActionResult> AddBook(Guid authorId, CreateBookDto bookDto)      
     {
-        var book = _mapper.Map<Book>(bookDto);
-        await _booksService.AddBookAsync(book);
-        return Ok("Успешно добавлено");
+        await _booksService.AddBook(bookDto, authorId);
+        return Ok(new { Message = "Успешно добавлено", Book = bookDto});
     }
 
-    [HttpPut("{bookId}")]
-    public async Task<IActionResult> UpdateBook(Guid boodId , [FromBody] PostBookDto bookDto)
+    [HttpPut("{bookId}/Update")]
+    public async Task<IActionResult> UpdateBook(Guid bookId , [FromBody] CreateBookDto bookDto)
     {
-        var bookToUpdate = await _booksService.GetBookByIdAsync(boodId);
-        _mapper.Map(bookDto, bookToUpdate);
-        if (bookToUpdate != null) await _booksService.UpdateBookAsync(bookToUpdate);
-        var updatedBookDto = _mapper.Map<GetBookDto>(bookToUpdate);
-        return Ok(new { Message = "Успешно обновлено", Book = updatedBookDto});
+        await _booksService.UpdateBook(bookId, bookDto);
+        return Ok(new { Message = "Успешно обновлено", Book = bookDto});
     }
     
-    [HttpDelete("{id}")]
+    [HttpDelete("{id}/Delete")]
     public async Task<IActionResult> DeleteBook(Guid id)
     {
-        await _booksService.DeleteBookAsync(id);
+        await _booksService.DeleteBook(id);
         return Ok("Успешно удалено");
     }
 }

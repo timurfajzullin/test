@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using BooksAndAuthors.Controllers.Services;
 using Microsoft.AspNetCore.Mvc;
-using Models;
 using System;
 using System.Threading.Tasks;
+using BooksAndAuthors.Database.Models;
 using Contracts.Dto;
 
 namespace BooksAndAuthors.Features
@@ -12,74 +12,46 @@ namespace BooksAndAuthors.Features
     [ApiController]
     public class AuthorsController : ControllerBase
     {
-        private readonly AuthorService _authorService;
-        private readonly IMapper _mapper;
+        private readonly IAuthorService _authorService;
 
-        public AuthorsController(AuthorService authorService, IMapper mapper)
+        public AuthorsController(IAuthorService authorService)
         {
             _authorService = authorService;
-            _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet("TakeAll")]
         public async Task<IActionResult> GetAuthors()
         {
-            var authors = await _authorService.GetAuthors();
-            var authorDtos = _mapper.Map<IEnumerable<GetAuthorDto>>(authors);
-            return Ok(authorDtos);
+            var result = await _authorService.GetAuthors();
+            return Ok(result);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}/TakeById")]
         public async Task<IActionResult> GetAuthor(Guid id)
         {
-            var author = await _authorService.GetAuthorById(id);
-            if (author == null)
-            {
-                return NotFound();
-            }
-            var authorDto = _mapper.Map<GetAuthorDto>(author);
-            return Ok(authorDto);
+            var result = await _authorService.GetAuthorById(id);
+            return Ok(result);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> AddAuthor([FromBody] PostAuthorDto authorDto)
+        [HttpPost("Create")]
+        public async Task<IActionResult> AddAuthor([FromBody] CreateAuthorDto authorDto)
         {
-            if (authorDto == null)
-            {
-                return BadRequest();
-            }
-            var author = _mapper.Map<Author>(authorDto);
-            await _authorService.AddAuthor(author);
-            return Ok(new { Message = "Успешно добавлено", Author = _mapper.Map<GetAuthorDto>(author) });
+            await _authorService.AddAuthor(authorDto);
+            return Ok(new { Message = "Успешно добавлено", Author = authorDto});
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}/Delete")]
         public async Task<IActionResult> DeleteAuthor(Guid id)
         {
-            var author = await _authorService.GetAuthorById(id);
-            if (author == null)
-            {
-                return NotFound();
-            }
             await _authorService.DeleteAuthor(id);
             return Ok(new { Message = "Успешно удалено", AuthorId = id });
         }
 
-        [HttpPut("{authorId}")]
-        public async Task<IActionResult> UpdateAuthor(Guid authorId, [FromBody] PostAuthorDto authorDto)
+        [HttpPut("{id}/Update")]
+        public async Task<IActionResult> UpdateAuthor(Guid id, [FromBody] CreateAuthorDto authorDto)
         {
-            var authorToUpdate = await _authorService.GetAuthorById(authorId);
-            if (authorToUpdate == null)
-            {
-                return NotFound();
-            }
-
-            _mapper.Map(authorDto, authorToUpdate);
-
-            await _authorService.UpdateAuthor(authorToUpdate);
-
-            var updatedAuthorDto = _mapper.Map<GetAuthorDto>(authorToUpdate);
-            return Ok(new { Message = "Успешно обновлено", Author = updatedAuthorDto });
+            await _authorService.UpdateAuthor(id, authorDto);
+            return Ok(new { Message = "Успешно обновлено", Author = authorDto });
         }
     }
 }

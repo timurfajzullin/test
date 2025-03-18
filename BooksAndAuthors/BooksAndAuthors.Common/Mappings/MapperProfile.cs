@@ -1,27 +1,47 @@
-﻿using AutoMapper;
+﻿using BooksAndAuthors.Database.Models;
 using Contracts.Dto;
-using Models;
 
 namespace BooksAndAuthors.Common.Mappings;
 
-public class MapperProfile : Profile
+public static class Mapper
 {
-    public MapperProfile()
+    public static BookDto ToBookDto(Book book)
     {
-        CreateMap<Book, GetBookDto>()
-            .ForMember(dest => dest.AuthorName, 
-                opt => opt.MapFrom(src => src.Author.Name));
-
-        CreateMap<PostBookDto, Book>()
-            .ForPath(dest => dest.Author.Name, 
-                opt => opt.MapFrom(src => src.AuthorName));
-
-        CreateMap<Author, GetAuthorDto>()
-            .ForMember(dest => dest.Books, 
-                opt => opt.MapFrom(src => src.Books));
-
-        CreateMap<PostAuthorDto, Author>()
-            .ForMember(dest => dest.Books, 
-                opt => opt.Ignore());
+        return new BookDto
+        {
+            Title = book.Title,
+            ISBN = book.ISBN,
+            Description = book.Description,
+            AuthorName = book.Author.Name,
+        };
     }
+
+    public static Book FromBookDto(CreateBookDto book, Guid authorId)
+    {
+        return new Book
+        {
+            Title = book.Title,
+            ISBN = book.ISBN,
+            Description = book.Description,
+            AuthorId = authorId,
+        };
+    }
+
+    public static AuthorDto ToAuthorDto(Author author)
+    {
+        return new AuthorDto
+        {
+            Name = author.Name,
+            Books = author.Books.Select(x => ToBookDto(x)).ToList()
+        };
+    }
+
+    public static Author FromAuthorDto(CreateAuthorDto authorDto)
+    {
+        return new Author
+        {
+            Name = authorDto.Name,
+        };
+    }
+        
 }

@@ -1,6 +1,6 @@
 ﻿namespace Contracts.Dto;
 
-public class PostAuthorDto
+public class CreateAuthorDto
 {
     public string Name { get; set; } = string.Empty;
 }

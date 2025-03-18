@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace Models;
+﻿namespace BooksAndAuthors.Database.Models;
 
 public class Author
 {

@@ -1,10 +1,12 @@
-﻿using BooksAndAuthors.Database;
+﻿using BooksAndAuthors.Common.Mappings;
+using BooksAndAuthors.Database;
+using Contracts.Dto;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Models;
 
 namespace BooksAndAuthors.Controllers.Services;
 
-public class BookService
+public class BookService : IBookService
 {
     private readonly IBookContext _bookContext;
 
@@ -13,29 +15,44 @@ public class BookService
         _bookContext = bookContext;
     }
 
-    public async Task<List<Book>> GetBooks()
+    public async Task<List<BookDto>> GetBooks()
     {
-        return await _bookContext.Books.ToListAsync();
+        return await _bookContext.Books
+            .Include(x => x.Author)
+            .Select(x => Mapper.ToBookDto(x))
+            .ToListAsync();
     }
 
-    public async Task<Book?> GetBookByIdAsync(Guid id)
+    public async Task<BookDto?> GetBookById(Guid id)
     {
-        return await _bookContext.Books.Where(x => x.Id == id).FirstOrDefaultAsync();
+        return await _bookContext.Books
+            .Where(x => x.Id == id)
+            .Include(x => x.Author)
+            .Select(x => Mapper.ToBookDto(x))
+            .FirstOrDefaultAsync();
     }
 
-    public async Task AddBookAsync(Book book)
+    public async Task AddBook(CreateBookDto book, Guid authorId)
     {
-        await _bookContext.Books.AddAsync(book);
+        await _bookContext.Books.AddAsync(Mapper.FromBookDto(book, authorId));
         await _bookContext.SaveChangesAsync();
     }
 
-    public async Task UpdateBookAsync(Book book)
+    public async Task UpdateBook(Guid id, [FromBody] CreateBookDto book)
     {
-        _bookContext.Books.Update(book);
-        await _bookContext.SaveChangesAsync();
+        var bookToUpdate = _bookContext.Books
+            .FirstOrDefault(x => x.Id == id);
+        if (bookToUpdate != null)
+        {
+            bookToUpdate.Title = book.Title;
+            bookToUpdate.Description = book.Description;
+            bookToUpdate.ISBN = book.ISBN;
+            _bookContext.Books.Update(bookToUpdate);
+            await _bookContext.SaveChangesAsync();
+        }
     }
 
-    public async Task DeleteBookAsync(Guid id)
+    public async Task DeleteBook(Guid id)
     {
         _bookContext.Books.Remove(await _bookContext.Books.FindAsync(id));
         await _bookContext.SaveChangesAsync();

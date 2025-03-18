@@ -1,5 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Models;
+﻿using BooksAndAuthors.Database.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BooksAndAuthors.Database
 {
@@ -24,7 +24,7 @@ namespace BooksAndAuthors.Database
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         
-        public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             return await base.SaveChangesAsync(cancellationToken);
         }

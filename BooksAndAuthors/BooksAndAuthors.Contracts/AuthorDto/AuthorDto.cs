@@ -1,7 +1,7 @@
 ﻿namespace Contracts.Dto;
 
-public class GetAuthorDto
+public class AuthorDto
 {
     public string Name { get; set; } = string.Empty;
-    public List<GetBookDto> Books { get; set; } = new();
+    public List<BookDto> Books { get; set; } = new();
 }
