@@ -37,10 +37,10 @@ public class BooksController : ControllerBase
         return Ok(new { Message = "Успешно добавлено", Book = bookDto});
     }
 
-    [HttpPut("{bookId}/Update")]
-    public async Task<IActionResult> UpdateBook(Guid bookId , [FromBody] CreateBookDto bookDto)
+    [HttpPut("{id}/Update")]
+    public async Task<IActionResult> UpdateBook(Guid id , [FromBody] CreateBookDto bookDto)
     {
-        await _booksService.UpdateBook(bookId, bookDto);
+        await _booksService.UpdateBook(id, bookDto);
         return Ok(new { Message = "Успешно обновлено", Book = bookDto});
     }
     
