@@ -22,7 +22,7 @@ namespace BooksAndAuthors.Database.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Models.Author", b =>
+            modelBuilder.Entity("BooksAndAuthors.Database.Models.Author", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -37,7 +37,7 @@ namespace BooksAndAuthors.Database.Migrations
                     b.ToTable("Authors");
                 });
 
-            modelBuilder.Entity("Models.Book", b =>
+            modelBuilder.Entity("BooksAndAuthors.Database.Models.Book", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -64,9 +64,27 @@ namespace BooksAndAuthors.Database.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("Models.Book", b =>
+            modelBuilder.Entity("BooksAndAuthors.Database.Models.User", b =>
                 {
-                    b.HasOne("Models.Author", "Author")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid");
+
+                    b.Property<string>("Login")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("Password")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("BooksAndAuthors.Database.Models.Book", b =>
+                {
+                    b.HasOne("BooksAndAuthors.Database.Models.Author", "Author")
                         .WithMany("Books")
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -75,7 +93,7 @@ namespace BooksAndAuthors.Database.Migrations
                     b.Navigation("Author");
                 });
 
-            modelBuilder.Entity("Models.Author", b =>
+            modelBuilder.Entity("BooksAndAuthors.Database.Models.Author", b =>
                 {
                     b.Navigation("Books");
                 });
