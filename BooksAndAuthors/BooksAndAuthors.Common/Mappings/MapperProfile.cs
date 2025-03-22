@@ -1,5 +1,7 @@
-﻿using BooksAndAuthors.Database.Models;
+﻿using BooksAndAuthors.Auth.Services;
+using BooksAndAuthors.Database.Models;
 using Contracts.Dto;
+using Contracts.UserDto;
 
 namespace BooksAndAuthors.Common.Mappings;
 
@@ -43,5 +45,13 @@ public static class Mapper
             Name = authorDto.Name,
         };
     }
-        
+
+    public static User FromUserDto(UserDto userDto)
+    {
+        return new User
+        {
+            Login = userDto.Login,
+            Password = PasswordHasher.HashPassword(userDto.Password),
+        };
+    }
 }

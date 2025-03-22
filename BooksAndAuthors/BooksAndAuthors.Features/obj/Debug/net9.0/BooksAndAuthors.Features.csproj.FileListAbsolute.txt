@@ -20,3 +20,5 @@ C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndA
 C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Features\bin\Debug\net9.0\BooksAndAuthors.Contracts.dll
 C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Features\bin\Debug\net9.0\BooksAndAuthors.Common.pdb
 C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Features\bin\Debug\net9.0\BooksAndAuthors.Contracts.pdb
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Features\bin\Debug\net9.0\BooksAndAuthors.Auth.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Features\bin\Debug\net9.0\BooksAndAuthors.Auth.pdb

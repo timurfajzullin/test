@@ -24,6 +24,8 @@ namespace BooksAndAuthors.Database
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
         
+        public DbSet<User> Users { get; set; }
+        
         public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             return await base.SaveChangesAsync(cancellationToken);
@@ -34,6 +36,8 @@ namespace BooksAndAuthors.Database
     {
         public DbSet<Book> Books { get; set; }
         public DbSet<Author> Authors { get; set; }
+        
+        public DbSet<User> Users { get; set; }
         
         Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
     }

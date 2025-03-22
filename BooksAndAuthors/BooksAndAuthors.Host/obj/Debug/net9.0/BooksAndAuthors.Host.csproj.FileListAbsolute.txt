@@ -319,3 +319,13 @@ C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndA
 C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\obj\Debug\net9.0\BooksAndAuthors.Host.pdb
 C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\obj\Debug\net9.0\BooksAndAuthors.Host.genruntimeconfig.cache
 C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\obj\Debug\net9.0\ref\BooksAndAuthors.Host.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\bin\Debug\net9.0\BooksAndAuthors.Auth.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Host\bin\Debug\net9.0\BooksAndAuthors.Auth.pdb

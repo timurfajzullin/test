@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Contracts",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Common", "BooksAndAuthors.Common\BooksAndAuthors.Common.csproj", "{C405D101-F0D0-4B10-8876-7421EFB207BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksAndAuthors.Auth", "BooksAndAuthors.Auth\BooksAndAuthors.Auth.csproj", "{EE70A2C7-F67E-473C-85E7-A8AD6FA35841}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{C405D101-F0D0-4B10-8876-7421EFB207BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C405D101-F0D0-4B10-8876-7421EFB207BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C405D101-F0D0-4B10-8876-7421EFB207BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE70A2C7-F67E-473C-85E7-A8AD6FA35841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE70A2C7-F67E-473C-85E7-A8AD6FA35841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE70A2C7-F67E-473C-85E7-A8AD6FA35841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE70A2C7-F67E-473C-85E7-A8AD6FA35841}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

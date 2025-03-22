@@ -18,3 +18,5 @@ C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndA
 C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Common\obj\Debug\net9.0\BooksAndAuthors.Common.pdb
 C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Common\obj\Debug\net9.0\BooksAndAuthors.Common.genruntimeconfig.cache
 C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Common\obj\Debug\net9.0\ref\BooksAndAuthors.Common.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Common\bin\Debug\net9.0\BooksAndAuthors.Auth.dll
+C:\Users\fajzu\OneDrive\Документы\GitHub\test\BooksAndAuthors\BooksAndAuthors.Common\bin\Debug\net9.0\BooksAndAuthors.Auth.pdb

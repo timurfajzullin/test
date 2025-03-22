@@ -1,12 +1,9 @@
-﻿using AutoMapper;
-using BooksAndAuthors.Controllers.Services;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Threading.Tasks;
-using BooksAndAuthors.Database.Models;
+﻿using BooksAndAuthors.Controllers.Services;
 using Contracts.Dto;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
-namespace BooksAndAuthors.Features
+namespace BooksAndAuthors.Controllers
 {
     [Route("/authors")]
     [ApiController]
@@ -32,21 +29,24 @@ namespace BooksAndAuthors.Features
             var result = await _authorService.GetAuthorById(id);
             return Ok(result);
         }
-
+        
+        [Authorize]
         [HttpPost("Create")]
         public async Task<IActionResult> AddAuthor([FromBody] CreateAuthorDto authorDto)
         {
             await _authorService.AddAuthor(authorDto);
             return Ok(new { Message = "Успешно добавлено", Author = authorDto});
         }
-
+        
+        [Authorize]
         [HttpDelete("{id}/Delete")]
         public async Task<IActionResult> DeleteAuthor(Guid id)
         {
             await _authorService.DeleteAuthor(id);
             return Ok(new { Message = "Успешно удалено", AuthorId = id });
         }
-
+        
+        [Authorize]
         [HttpPut("{id}/Update")]
         public async Task<IActionResult> UpdateAuthor(Guid id, [FromBody] CreateAuthorDto authorDto)
         {

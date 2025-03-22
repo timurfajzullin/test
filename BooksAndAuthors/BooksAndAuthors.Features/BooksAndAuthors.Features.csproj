@@ -16,6 +16,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\BooksAndAuthors.Auth\BooksAndAuthors.Auth.csproj" />
       <ProjectReference Include="..\BooksAndAuthors.Common\BooksAndAuthors.Common.csproj" />
       <ProjectReference Include="..\BooksAndAuthors.Contracts\BooksAndAuthors.Contracts.csproj" />
       <ProjectReference Include="..\BooksAndAuthors.Database\BooksAndAuthors.Database.csproj" />

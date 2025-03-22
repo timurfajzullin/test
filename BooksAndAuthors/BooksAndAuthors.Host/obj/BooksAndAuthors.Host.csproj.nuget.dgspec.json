@@ -4,6 +4,75 @@
     "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Host\\BooksAndAuthors.Host.csproj": {}
   },
   "projects": {
+    "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Auth\\BooksAndAuthors.Auth.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Auth\\BooksAndAuthors.Auth.csproj",
+        "projectName": "BooksAndAuthors.Auth",
+        "projectPath": "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Auth\\BooksAndAuthors.Auth.csproj",
+        "packagesPath": "C:\\Users\\fajzu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Auth\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\fajzu\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Database\\BooksAndAuthors.Database.csproj": {
+                "projectPath": "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Database\\BooksAndAuthors.Database.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Common\\BooksAndAuthors.Common.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -26,6 +95,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Auth\\BooksAndAuthors.Auth.csproj": {
+                "projectPath": "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Auth\\BooksAndAuthors.Auth.csproj"
+              },
               "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Contracts\\BooksAndAuthors.Contracts.csproj": {
                 "projectPath": "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Contracts\\BooksAndAuthors.Contracts.csproj"
               },
@@ -246,6 +318,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Auth\\BooksAndAuthors.Auth.csproj": {
+                "projectPath": "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Auth\\BooksAndAuthors.Auth.csproj"
+              },
               "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Common\\BooksAndAuthors.Common.csproj": {
                 "projectPath": "C:\\Users\\fajzu\\OneDrive\\Документы\\GitHub\\test\\BooksAndAuthors\\BooksAndAuthors.Common\\BooksAndAuthors.Common.csproj"
               },
@@ -379,6 +454,10 @@
             "EntityFramework": {
               "target": "Package",
               "version": "[6.5.1, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.3, )"
             },
             "Microsoft.AspNetCore.Mvc.Core": {
               "target": "Package",
