@@ -9,7 +9,6 @@ namespace BooksAndAuthors.Auth;
 
 public class JwtTokenHandler
 {
-
     public string GenerateToken(User user)
     {
         var claims = new List<Claim> {new Claim(ClaimsIdentity.DefaultNameClaimType, user.Login)};
@@ -29,4 +28,3 @@ public class JwtTokenHandler
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
 }
-

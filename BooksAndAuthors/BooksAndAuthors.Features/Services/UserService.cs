@@ -39,9 +39,9 @@ public class UserService: IUserService
         {
             return Results.Unauthorized();
         }
-
+        
         var token = _jwtTokenHandler.GenerateToken(user);
 
-        return Results.Ok(token);      
+        return Results.Ok(token);
     }
 }
